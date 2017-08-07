@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <title>Success</title>
+    </head>
+    <body>
+    <div class="container">
+        <h2>Form Successfully Submitted. Thanks!!!!</h2>
+        <h3>Form Data:</h3>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+            <ul>
+                <li>Name: {{ name }}</li>
+                <li>Dojo Location: {{ city }}</li>
+                <li>Stacks Completed:  {{ stacks }}</li>
+                <li>Favorite Stack:  {{ favorite }}</li>
+                <li>Graduation Date:  {{ graduation }}</li>
+                <li>Comments:  {{ comments }}</li>
+            </ul>
+        <a href="/">Survey Page</a>
+    </div>
+    </body>
+</html>

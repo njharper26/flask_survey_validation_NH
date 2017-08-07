@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <title>Dojo Survey</title>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Dojo Survey</h2>
+            <p>Please complete this short survey about your experience with Coding Dojo bootcamp. Thanks!!</p>
+            <h3>Form:</h3>
+            <form action="/process" id="survey" method="POST">
+                <label>Name:</label><br>
+                <input type="" name="html_name"><br>
+                
+                <label>Dojo Location (City):</label><br>
+                <input type="text" name="html_city"><br>
+                
+                <label>Stacks Completed:</label><br>
+                <input type="number" name="html_stacks"><br>
+                
+                <label>Favorite Stack:</label><br>
+                <input type="text" name="html_favorite"><br>
+                
+                <label>Graduation Date:</label><br>
+                <input type="date" name="html_graduation"><br>
+            
+                <input type="submit" value="Submit">
+            </form>
+                <label>Comments:</label><br>
+                <textarea type="comment" name="html_comments" form="survey"></textarea><br>
+        </div>
+    </body>
+</html>
